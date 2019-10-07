@@ -12,7 +12,7 @@ import java.util.*;
 
 
 
-public class BankAccount implements Comparable<BankAccount>{
+public class BankAccount extends Measurable {
     private static final float DEFAULT_BALANCE = 0;
     private float balance;
     private float rate;
@@ -21,8 +21,8 @@ public class BankAccount implements Comparable<BankAccount>{
 
 
     @Override
-    public int compareTo(BankAccount o) {
-        return (int)(this.balance - o.balance);
+    public float getMeasure() {
+        return this.balance;
     }
 
     public BankAccount(float balance, float rate ){
